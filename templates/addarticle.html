@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+
+{% block page__title %}
+    Meqale elave et
+{% endblock page__title %}
+    
+
+
+{% block body %}
+    <h2>meqalenizi elave edin</h2>
+
+    <form method="post">
+     {% csrf_token %}
+     {{form.media }}
+     {{form.as_p}}
+     <br>
+     <button class="btn">Elave et</button>
+
+    </form>
+{% endblock body %}
+    
